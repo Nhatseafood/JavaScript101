@@ -17,8 +17,6 @@ function lvl4exercise3(bool) {
     return !true
 
 
-    
-
 }
 
 function lvl4exercise4(bool1, bool2) {
@@ -39,5 +37,5 @@ function lvl4exercise6(bool1, bool2) {
 	
 }
 
-var x=lvl4exercise3()
+var x=lvl4exercise4()
 console.log(x)
