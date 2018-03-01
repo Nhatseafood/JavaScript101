@@ -20,7 +20,7 @@ function lvl3exercise2() {
 function lvl3exercise3() {
     // Create a variable that equals 12 and convert it to a string with concatenation. Return it.
     var number = 12
-    number+='l'
+    number+=''
 
     return number
 
@@ -29,12 +29,19 @@ function lvl3exercise3() {
 }
 
 function lvl3exercise4() {
-	// Create a "hello world!" string. Return the length of the string
+    // Create a "hello world!" string. Return the length of the string
+    var word1 = "hello world"
+    return word1.length
+
+
 
 }
 
 function lvl3exercise5() {
-	// Create a "hello world!" string. Return the index of the word "world".
+    // Create a "hello world!" string. Return the index of the word "world".
+    var word1 = "hello world"
+
+    return word1.indexOf('world')
 	
 }
 
