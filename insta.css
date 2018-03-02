@@ -28,7 +28,7 @@ h1 {
   }
 
 .selected-image{
-   transform: scale(3);
+   transform: scale(2);
    position: fixed;
    width: 50%;
    height: 50%;
