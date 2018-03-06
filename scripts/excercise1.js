@@ -114,23 +114,56 @@ printNumber1 (1,10)
 // printBox(6,4)
 
 
-function printBanner(height){
+// function printBanner(height){
 
       
-            console.log('*'.repeat(height.length)+ '**')
+//             console.log('*'.repeat(height.length)+ '**')
         
         
-            console.log('*' +(height)+ '*')
+//             console.log('*' +(height)+ '*')
         
       
-            console.log('*'.repeat(height.length+2))
+//             console.log('*'.repeat(height.length+2))
         
     
 
+// }
+// printBanner('Welcome to Digital Crafts')
+
+
+function leetSpeak(string) {
+    string = string.toUpperCase();
+    var string2 = ''
+for (var i = 0; i < string.length; i++ ) {
+    if (string[i] === "A") {
+        string2 += 4;
+    }
+    else if (string[i] === "E") {
+        string2 += 3; 
+    }
+    else if (string[i] === "G") {
+        string2 += 6;
+    }
+    else if (string[i] === "I") {
+        string2 += 1;
+    }
+    else if (string[i] === "O") {
+        string2 += 0; 
+    }
+    else if (string[i] === "S") {
+        string2 += 5;
+    }
+    else if (string[i] === "T") {
+        string2 += 7;
+    }
+    else {
+        string2 += string[i]
+    }
 }
-printBanner('Welcome to Digital Crafts')
 
-
+console.log(string2)
+}
+leetSpeak("Hello how are you?")
 
 
 
