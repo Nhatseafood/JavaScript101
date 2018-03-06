@@ -171,39 +171,78 @@
  
 
 //    console.log(people);
-function add(a, b) {
-    return a + b;
+// function add(a, b) {
+//     return a + b;
+// }
+
+// var arr = [
+//     [1, 3, 4],
+//     [2, 4, 6, 8],
+//     [3, 6]
+//   ];
+
+
+
+// function compare(a,b) {
+//     if (a.reduce(add,0) < b.reduce(add,0)) {
+//       return -1;
+//     }
+//     if (a.reduce(add,0) > b.reduce(add,0)) {
+//       return 1;
+//     }
+//     return 0;
+//   }
+
+
+// arr.sort(compare);
+// console.log(arr)
+
+
+// function call3Times(fun) {
+//     fun();
+//     fun();
+//     fun();
+// }
+
+// function fun() {
+//     console.log("Hello World!")
+// }
+// call3Times(fun)
+
+
+// function callNtimes(number, funFunc) {
+//     for (var i = 0; i < number; i++) {
+//         funFunc() 
+        
+//     }
+   
+
+// }
+// function fun() {
+//    console.log("Hello World!")
+
+// }  
+// callNtimes(5,fun)  
+
+// function add(a, b) {
+//     return a + b;
+// }
+// function sum(arrayOfNumbers) {
+//     var x=arrayOfNumbers.reduce(add,0);
+//     console.log(x);
+
+// }
+// var arrayOfNumbers = [1,2,3];
+// sum(arrayOfNumbers)
+
+
+
+
+function acroynm(arrayOfWords) {
+    var x=arrayOfWords.reduce(function(accumulator,currentValue,currentIndex){
+    return accumulator + currentValue[1] + currentIndex
+    },'');
+    console.log(x)
 }
-
-var arr = [
-    [1, 3, 4],
-    [2, 4, 6, 8],
-    [3, 6]
-  ];
-
-var sum = []
-
-function compare(a,b) {
-    if (a.reduce(add,0) < b.reduce(add,0)) {
-      return -1;
-    }
-    if (a.reduce(add,0) > b.reduce(add,0)) {
-      return 1;
-    }
-    
-    return 0;
-  }
-
-for(var i = 0; i<arr.length; i++) {
-    sum.push(arr[i].reduce(add, 0));
-
-}
-
-arr.sort(compare);
-console.log(arr)
-
-
-  
-  
-
-
+var arrayOfWords = ['very', 'important', 'person'];
+acroynm(arrayOfWords)
