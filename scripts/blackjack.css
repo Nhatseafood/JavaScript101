@@ -1,0 +1,24 @@
+#table {
+    background-color: greenyellow;
+    border-radius: 20px;
+    padding: 60px;
+    border: solid black;
+
+}
+
+
+
+.box{
+    background-color: green;
+}
+
+.boxes{
+    text-align: center;
+    padding: 20px;
+
+}
+
+img {
+    width:48px;
+    height: 58px;
+}

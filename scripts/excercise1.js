@@ -131,42 +131,56 @@ printNumber1 (1,10)
 // printBanner('Welcome to Digital Crafts')
 
 
-function leetSpeak(string) {
-    string = string.toUpperCase();
+// function leetSpeak(string) {
+//     string = string.toUpperCase();
+//     var string2 = ''
+// for (var i = 0; i < string.length; i++ ) {
+//     if (string[i] === "A") {
+//         string2 += 4;
+//     }
+//     else if (string[i] === "E") {
+//         string2 += 3; 
+//     }
+//     else if (string[i] === "G") {
+//         string2 += 6;
+//     }
+//     else if (string[i] === "I") {
+//         string2 += 1;
+//     }
+//     else if (string[i] === "O") {
+//         string2 += 0; 
+//     }
+//     else if (string[i] === "S") {
+//         string2 += 5;
+//     }
+//     else if (string[i] === "T") {
+//         string2 += 7;
+//     }
+//     else {
+//         string2 += string[i]
+//     }
+// }
+
+// console.log(string2)
+// }
+// leetSpeak("Hello how are you?")
+
+
+function longvowel(string) {
     var string2 = ''
-for (var i = 0; i < string.length; i++ ) {
-    if (string[i] === "A") {
-        string2 += 4;
-    }
-    else if (string[i] === "E") {
-        string2 += 3; 
-    }
-    else if (string[i] === "G") {
-        string2 += 6;
-    }
-    else if (string[i] === "I") {
-        string2 += 1;
-    }
-    else if (string[i] === "O") {
-        string2 += 0; 
-    }
-    else if (string[i] === "S") {
-        string2 += 5;
-    }
-    else if (string[i] === "T") {
-        string2 += 7;
-    }
-    else {
-        string2 += string[i]
-    }
+for (var i = 0; i <string.length; i++) {
+    if (string[i] === string2)
+    string = string [:i] + 3 * string[i] + string[i:]
+    x += 4
+    p = name[x]
 }
 
-console.log(string2)
+
+
+
+
+
 }
-leetSpeak("Hello how are you?")
-
-
-
 
 
 
