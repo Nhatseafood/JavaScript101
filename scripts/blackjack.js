@@ -3,7 +3,7 @@ function Deck(){
 }
 
 Deck.prototype.newDeck= function(){
-    for(let  i =2 ;i<10;i++){
+    for(let  i =1 ;i<10;i++){
         var newcard = new Card(i, i.toString(),"H");
         this.deck.push(newcard);
         var newcard = new Card(i,i.toString(), "D");
@@ -64,40 +64,80 @@ Deck.prototype.shuffle = function(){
 }
 
 Deck.prototype.draw = function(){
-    return this.deck.pop();
+    var x =this.deck.pop();
+    return x
 }
 
 
-function Card(point, face,suite){
+function Card(point, rank,suit){
     this.point = point;
-    this.suite = suite;
-    this.face = face;
+    this.suit = suit;
+    this.rank = rank;
 }
 
 
-function myHand(){
+function Hand(){
     this.card = [];
-    this.point= 0;
+    this.sumPoint= 0;
+}
+Hand.prototype.addCard= function(card) {
+   this.card.push(card.rank + card.suit);
+   console.log(this.card)
+
+   this.sumPoint += card.point;
+   console.log(this.sumPoint, "<<< adds all points in hand")
 }
 
-function dealerHand() {
-    this.card = [];
-    this.point= 0;
-
+Hand.prototype.getPoints= function() {
+   return this.sumPoint
 }
 
+Deck.prototype.numCardsLeft = function() {
+    return this.deck.length
+}
 
 //Testing our objects
 Card.prototype.getURL = function(){
-    return "JPEG/" + this.face+this.suite+".jpg"
+    return "JPEG/" + this.rank +this.suit + ".jpg"
 }
+
+
+
 var mydeck = new Deck();
 mydeck.newDeck();
 mydeck.shuffle();
+
 var Playerhand = new Hand();
 var Dealerhand = new Hand();
 
+function displayCard(card) {
+    var handContainer = document.getElementById("dealer-hand");
+    console.log(handContainer);
+
+    var cardImg = document.createElement("img");
+
+    handContainer.appendChild(cardImg);
+}
+
+var hitBtn = document.getElementById("hit-button");
+
+hitBtn.addEventListener("click" , function() {
+    console.log( this.card , "<< my card") 
+   displayCard(Playerhand.addCard(mydeck.draw()));
+});
+
+var dealBtn = document.getElementById("deal-button")
+
+dealBtn.addEventListener("click", function() {
+    console.log(Playerhand.addCard(mydeck.draw()) );
+    console.log(Playerhand.addCard(mydeck.draw()) );
+    console.log(Dealerhand.addCard(mydeck.draw()) );
+    console.log(Dealerhand.addCard(mydeck.draw()) );
+    
+
+});
 
 
-console.log(mydeck.deck);
-console.log(mydeck.draw().getURL());
+console.log(mydeck.deck , "<< my entire deck. ");
+// console.log(mydeck.draw().getURL());
+console.log ( mydeck.numCardsLeft() , " << cards left" ) 
