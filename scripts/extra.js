@@ -70,7 +70,7 @@ function printSquare(number) {
     for(var i=0;i < number;i++)
     console.log(i);
     for(var x=0;x <number;i++) {
-        console.log(x * "*");
+        console.log(x "*");
     }
 } 
 var square = printSquare(5)
